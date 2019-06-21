@@ -8,3 +8,5 @@ sessions
 parameters_*
 httpserver.pid
 httpserver.log
+errors
+

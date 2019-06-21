@@ -1,0 +1,35 @@
+{{extend "layout.html"}}
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Soul</th>
+        <th>Creature name</th>
+        <th>Lifetime</th>
+        <th>Creature state</th>
+        <th>Birthday</th>
+        <th>Total add lifetime</th>
+        <th>Remain days</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{for c in grid:}}
+    <tr>
+        <td>
+            <a href="{{=URL('creatures','soul_list',args=['soul','creature.soul',c['soul']])}}">
+            {{=db.soul[c['soul']].soul_name}}
+            </a>
+        </td>
+        <td>
+            <a href="{{=URL('creatures','soul_list',args=['soul','creature.soul',c['soul'],'edit','creature',c['id']])}}">
+            {{=c['creature_name']}}
+            </a>
+        </td>
+        <td>{{=c['lifetime']}}</td>
+        <td>{{=c['creature_state']}}</td>
+        <td>{{=c['birthday']}}</td>
+        <td>{{=c['total_add_lifetime']}}</td>
+        <td>{{=c['remain_days']}}</td>
+    </tr>
+    {{pass}}
+    </tbody>
+</table>
