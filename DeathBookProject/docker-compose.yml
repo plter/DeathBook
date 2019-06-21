@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  web2py:
+    image: python:3-slim
+    volumes:
+      - "./web2py:/opt/web2py"
+    command: python3 /opt/web2py/web2py.py -a web2py_secret -i 0.0.0.0 -p 80
+    tty: true
+    ports:
+      - "80:80"
+  db:
+    image: mariadb
+    restart: always
+    volumes:
+      - "db_data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  db_data:

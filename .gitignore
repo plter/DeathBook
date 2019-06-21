@@ -1,3 +1,10 @@
 .DS_Store
 venv
 .idea
+*.pyc
+databases
+sessions
+*.w2p
+parameters_*
+httpserver.pid
+httpserver.log
