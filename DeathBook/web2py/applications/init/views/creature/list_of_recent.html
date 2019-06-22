@@ -1,0 +1,25 @@
+{{extend 'layout.html'}}
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Soul</th>
+        <th>Creature name</th>
+        <th>Lifetime</th>
+        <th>Birthday</th>
+        <th>Total add lifetime</th>
+        <th>Remain days</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{for c in grid:}}
+    <tr>
+        <td>{{=c['soul']}}</td>
+        <td>{{=c['creature_name']}}</td>
+        <td>{{=c['lifetime']}}</td>
+        <td>{{=c['birthday']}}</td>
+        <td>{{=c['total_add_lifetime']}}</td>
+        <td>{{=c['remain_days']}}</td>
+    </tr>
+    {{pass}}
+    </tbody>
+</table>
