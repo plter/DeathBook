@@ -1,5 +1,7 @@
 # DeathBook  
 
+视频教程：[https://yunp.top/init/p/v/1506](https://yunp.top/init/p/v/1506)
+
 # 课程设计 
 
 1. 效果演示
